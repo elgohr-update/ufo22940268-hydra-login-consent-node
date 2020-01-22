@@ -96,7 +96,7 @@ router.post('/', csrfProtection, function (req, res, next) {
           };
 
           let subject = response.subject;
-          if (subject === 'no-email@bar.com') {
+          if (/^no-email.+/.test(subject)) {
               delete idToken['email'];
           }
           idToken.username = `username for subject ${subject}`;
