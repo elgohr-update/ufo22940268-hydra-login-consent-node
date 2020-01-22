@@ -91,11 +91,12 @@ router.post('/', csrfProtection, function (req, res, next) {
       // This will be called if the HTTP request was successful
       .then(function (response) {
 
+          let subject = response.subject;
+
           let idToken = {
-              email: '2@2.com'
+              email: subject
           };
 
-          let subject = response.subject;
           if (/^no-email.+/.test(subject)) {
               delete idToken['email'];
           }
