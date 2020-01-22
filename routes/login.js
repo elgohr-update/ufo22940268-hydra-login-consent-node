@@ -85,7 +85,7 @@ router.post('/', csrfProtection, function (req, res, next) {
       // All we need to do now is to redirect the user back to hydra!
       res.redirect(response.redirect_to);
     })
-    // This will handle any error that happens when making HTTP calls to hydra
+    // This will handle any error that happens when  making HTTP calls to hydra
     .catch(function (error) {
       next(error);
     });
