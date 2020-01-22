@@ -90,7 +90,7 @@ router.post('/', csrfProtection, function (req, res, next) {
       next(error);
     });
 
-  // You could also deny the login request which tells hydra that no one authenticated!
+  // You could also  deny the login request which tells hydra that no one authenticated!
   // hydra.rejectLoginRequest(challenge, {
   //   error: 'invalid_request',
   //   error_description: 'The user did something stupid...'
